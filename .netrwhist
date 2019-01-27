@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/data/www/project/kahui/kahui-admin/client/store'
+let g:netrw_dirhist_2='/data/www/project/kahui/kahui-admin/client/router'
+let g:netrw_dirhist_3='/data/www/project/kahui/victoriaSkye/app'

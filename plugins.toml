@@ -1,0 +1,124 @@
+[[plugins]]
+repo = "Shougo/denite.nvim"
+hook_post_source = "source ~/.config/nvim/plugins/denite.vim"
+
+[[plugins]]
+repo = "roxma/vim-hug-neovim-rpc"
+if = "!has('nvim')"
+
+[[plugins]]
+repo = "roxma/nvim-yarp"
+if = "!has('nvim')"
+
+[[plugins]]
+repo = "wsdjeg/dein-ui.vim"
+
+[[plugins]]
+repo = "tpope/vim-fugitive"
+
+[[plugins]]
+repo = "airblade/vim-gitgutter"
+hook_add = "set updatetime=100"
+
+[[plugins]]
+repo = "Shougo/deoplete.nvim"
+on_event = "InsertEnter"
+hook_add = "let g:deoplete#enable_at_startup = 1"
+hook_post_source = "source ~/.config/nvim/plugins/deoplete.vim"
+
+[[plugins]]
+repo = "justinmk/vim-sneak"
+hook_add = "let g:sneak#label = 1"
+
+[[plugins]]
+repo = "morhetz/gruvbox"
+script_type = "colors"
+
+[[plugins]]
+repo = "sts10/vim-pink-moon"
+script_type = "colors"
+
+[[plugins]]
+repo = "jiangmiao/auto-pairs"
+
+[[plugins]]
+repo = "pangloss/vim-javascript"
+on_ft = [ "javascript", "jsx", "javascript.jsx" ]
+
+[[plugins]]
+repo = "maxmellon/vim-jsx-pretty"
+on_ft = [ "javascript", "jsx", "javascript.jsx" ]
+
+[[plugins]]
+repo = "darthmall/vim-vue"
+on_ft = "vue"
+
+[[plugins]]
+repo = "cespare/vim-toml"
+on_ft = "toml"
+
+[[plugins]]
+repo = "scrooloose/nerdcommenter"
+on_event = "InsertEnter"
+hook_add = """
+  let g:NERDSpaceDelims = 1
+  let g:NERDTrimTrailingWhitespace = 1
+  let g:NERDDefaultAlign = 'left'
+  let g:NERDCompactSexyComs = 1
+"""
+
+[[plugins]]
+repo = "scrooloose/nerdtree"
+on_cmd = "NERDTreetoggle"
+hook_add = """
+  map <Leader>ft :NERDTreeToggle<CR>
+  let g:NERDTreeShowHidden = 1
+  let g:NERDTreeQuitOnOpen = 1
+  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | 1 | endif
+"""
+
+[[plugins]]
+repo = "w0rp/ale"
+hook_add = """
+  let g:ale_sign_error = '✗'
+  let g:ale_sign_warning = '⚡'
+  let g:ale_fixers = {
+    \ 'javascript': ['prettier'],
+    \ 'css': 'prettier',
+    \ }
+  map <Leader>lt :ALEToggle<CR>
+"""
+# let g:ale_fix_on_save = 1
+# nmap <silent> <C-n> <Plug>(ale_previous_wrap)
+# nmap <silent> <C-p> <Plug>(ale_next_wrap)
+
+[[plugins]]
+repo = "itchyny/lightline.vim"
+hook_add = "source ~/.config/nvim/plugins/lightline.vim"
+
+[[plugins]]
+repo = "osyo-manga/vim-anzu"
+hook_add = """
+  nmap n <Plug>(anzu-n-with-echo)
+  nmap N <plug>(anzu-N-with-echo)
+  nmap <silent> * <plug>(anzu-star-with-echo)
+  nmap # <plug>(anzu-sharp-with-echo)
+"""
+
+[[plugins]]
+repo = "fatih/vim-go"
+do = ":GoUpdateBinaries"
+on_ft = "go"
+
+[[plugins]]
+repo = "nsf/gocode"
+rtp = "nvim/"
+
+[[plugins]]
+repo = "tpope/vim-surround"
+
+[[plugins]]
+repo = "terryma/vim-multiple-cursors"
+
+[[plugins]]
+repo = "wakatime/vim-wakatime"
