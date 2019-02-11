@@ -17,6 +17,7 @@ set report=0
 set synmaxcol=1000
 set lazyredraw
 
+" backup {{{
 set nobackup
 set nowritebackup
 set noswapfile
@@ -24,6 +25,7 @@ if has('persistent_undo')
     set undofile
     set undodir=$HOME/.vim/undo
 endif
+" }}}
 
 set history=2000
 
@@ -40,7 +42,7 @@ set smartcase
 set noshowmode
 set scrolloff=7
 set number
-set relativenumber
+" set relativenumber
 set list
 " }}}
 

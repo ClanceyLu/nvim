@@ -10,7 +10,7 @@ call denite#custom#option('_', {
 
 if executable('ag')
   call denite#custom#var('file/rec', 'command',
-        \ ['ag', '--follow', '--nocolor', '--nogroup', '-g', ''])
+        \ ['ag', '--follow', '--nocolor', '--nogroup', '--ignore', '*.png,', '-g', ''])
   call denite#custom#var('grep', 'command', ['ag'])
   call denite#custom#var('grep', 'default_opts',
         \ ['-i', '--vimgrep', '--smart-case'])
@@ -49,7 +49,7 @@ call denite#custom#map(
       \ )
 
 call denite#custom#filter('matcher/ignore_globs', 'ignore_globs',
-      \ ['.git/', 'venv/', 'images/', 'img/', 'fonts/', 'node_modules/'])
+      \ ['.git/', 'venv/', 'images/', 'img/', 'fonts/', 'res/',  'node_modules/', 'dist/'])
 
 let s:menus = {}
 
