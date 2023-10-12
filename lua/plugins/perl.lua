@@ -3,7 +3,13 @@ return {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
-        perlpls = {},
+        perlpls = {
+          settings = {
+            pls = {
+              inc = { "$ROOT_PATH/lib" },
+            },
+          },
+        },
       },
     },
   },
