@@ -8,6 +8,7 @@ return {
           -- { "~/repos", {} },                        An empty pattern list indicates that all subdirectories are considered projects
           -- "~/dev",                                  dev is a workspace. default patterns is used (specified below)
           "~/workspace/user_center/",
+          "~/workspace/",
           "~/.config",
         },
         -- patterns = { ".git", ".svn", ".hg" },      -- Default patterns to use if none were specified. These are NOT regexps.
