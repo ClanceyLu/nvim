@@ -1,9 +1,9 @@
 {
   "extras": [
-
+    "lazyvim.plugins.extras.lang.yaml"
   ],
   "news": {
-    "NEWS.md": "2123"
+    "NEWS.md": "5204"
   },
   "version": 3
 }
